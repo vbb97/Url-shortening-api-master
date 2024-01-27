@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-size: 18px;
+}
+
+main header .hide-menu {
+  transform: rotateX(-90deg);
+  
+}
