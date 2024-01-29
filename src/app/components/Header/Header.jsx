@@ -5,7 +5,10 @@ import Navbar from './Navbar';
 export default function Header() {
   function showMenu() {
     const navbar = document.getElementById('navbar');
+    const iconMenu = document.getElementById('icon-menu');
+
     navbar.classList.toggle('hide-menu');
+    iconMenu.classList.toggle('sm:bg-close');
   }
 
   return (
@@ -14,7 +17,7 @@ export default function Header() {
       
       <Navbar />
 
-      <Image onClick={() => showMenu()} width={25} height={18} className="sm:pointer" src="./images/icon-hamburger.svg" alt="Ícone do menu móvel."></Image>
+      <div onClick={() => showMenu()} id="icon-menu" className='sm:w-6 sm:h-5 sm:bg-hamburger sm:bg-no-repeat sm:bg-center sm:bg-cover sm:transition-all'/>
     </header>
   );
 }
