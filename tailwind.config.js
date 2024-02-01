@@ -31,6 +31,7 @@ module.exports = {
         close: "url('/images/icon-close.svg')",
         work: "url('/images/illustration-working.svg')",
         pattern: "url('/images/bg-shorten-mobile.svg')",
+        boost: "url('/images/bg-boost-mobile.svg')",
       },
     },
   },

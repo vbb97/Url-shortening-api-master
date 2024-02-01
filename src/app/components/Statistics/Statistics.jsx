@@ -13,7 +13,8 @@ export default function Statistics() {
           statistics dashboard.
         </p>
       </div>
-      <div className="sm:flex sm:flex-col sm:gap-12">
+      <div className="sm:flex sm:flex-col sm:gap-12 sm:relative">
+        <div className="sm:w-2 sm:absolute sm:top-0 sm:bottom-0 sm:left-1/2 sm:-translate-x-1/2 sm:bg-primaryCyan"></div>
         <StatistcsItem
           pathImage="./images/icon-brand-recognition.svg"
           title="Brand Recognition"

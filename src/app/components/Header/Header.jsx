@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import Image from 'next/image';
 import Navbar from './Navbar';
@@ -8,16 +8,30 @@ export default function Header() {
     const iconMenu = document.getElementById('icon-menu');
 
     navbar.classList.toggle('hide-menu');
-    iconMenu.classList.toggle('sm:bg-close');
+
+    if(iconMenu.classList.contains('sm:bg-close')) {
+      iconMenu.classList.replace('sm:bg-close', 'sm:bg-hamburger');
+    } else {
+      iconMenu.classList.replace('sm:bg-hamburger', 'sm:bg-close');
+    }
   }
 
   return (
     <header className="sm:py-8 sm:px-4 sm:flex sm:items-center sm:justify-between">
-      <Image width={121} height={33} src="./images/logo.svg" alt="Logo da marca Shortly."></Image>
-      
+      <Image
+        width={121}
+        height={33}
+        src="./images/logo.svg"
+        alt="Logo da marca Shortly."
+      ></Image>
+
       <Navbar />
 
-      <div onClick={() => showMenu()} id="icon-menu" className='sm:w-6 sm:h-5 sm:bg-hamburger sm:bg-no-repeat sm:bg-center sm:bg-cover sm:transition-all'/>
+      <div
+        onClick={() => showMenu()}
+        id="icon-menu"
+        className="sm:w-6 sm:h-5 sm:bg-hamburger sm:bg-no-repeat sm:bg-center sm:bg-cover sm:transition-all"
+      />
     </header>
   );
 }

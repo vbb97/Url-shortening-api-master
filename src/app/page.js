@@ -3,6 +3,8 @@ import Main from './components/Main';
 import Shortening from './components/Shortening';
 import Statistics from './components/Statistics/Statistics';
 import Background from './components/Background';
+import Boosty from './components/Boosty';
+import Footer from './components/Footer';
 export default function Home() {
   return (
     <main className="relative overflow-x-clip z-10">
@@ -11,6 +13,8 @@ export default function Home() {
       <Shortening />
       <Statistics />
       <Background />
+      <Boosty />
+      <Footer />
     </main>
   );
 }
